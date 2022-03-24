@@ -1,0 +1,43 @@
+.NavBar {
+left: 219px;
+top: 28px;
+width: 1121px;
+height: 39px;
+color: #000000;
+font-family: 'Source Sans Pro';
+font-size: 20px;
+font-weight: normal;
+font-style: normal;
+text-decoration: none;
+text-align: center;
+padding: 20;
+border: none; border-radius: 30px;
+}
+
+
+.NavBarItemSelected {
+background: #100F0F;
+color: #000000;
+}
+
+.jumbotron {
+    background-image: url("../images/squats-workout.webp");
+    background-size: cover;
+    height: 70vh;
+    color: white;
+    left: 50px;
+    padding-left: 15px;
+    
+}
+
+.fitness-submit{
+    padding-top: 15px
+}
+
+.display-4 {
+    padding-top: 10px;
+}
+
+.jumbo-bottom {
+    padding-top: 100px;
+}
