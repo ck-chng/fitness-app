@@ -7,7 +7,7 @@ const Jumbotron = () => {
         <h1 className="display-4">Fitness App</h1>
         <h3 className="lead">Your one-stop page to easily track your workout progress!</h3>
             <div className="jumbo-bottom">
-            <a className="btn btn-primary btn-lg jumbo-bottom" href="https://delightful-narwhal-52c355.netlify.app/user" role="button">Get Started</a>
+            <a className="btn btn-primary btn-lg jumbo-bottom" href="/user" role="button">Get Started</a>
             </div>
         
     </div>
