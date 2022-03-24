@@ -67,7 +67,7 @@ function Chart() {
 
     const data = {
         datasets: [{
-            label: '# of Votes',
+            label: 'Weight (kg)',
             data: weightDateChart,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)'
