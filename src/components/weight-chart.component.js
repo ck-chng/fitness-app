@@ -18,14 +18,14 @@ function Chart() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/exercises/')
+        axios.get('https://fitnessapp-ck.herokuapp.com/exercises/')
             .then(response => {
                 if (response.data.length > 0) {
                     setUsers(response.data.map(user => user.username));
                     setUsername(response.data[0].username)
                 }
 
-                axios.get('http://localhost:5000/exercises/weight/steph' )
+                axios.get('https://fitnessapp-ck.herokuapp.com/exercises/weight/steph' )
                     .then(response => {
                         setWeightDate(response.data)
                     })
@@ -40,7 +40,7 @@ function Chart() {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:5000/exercises/weight/' + username)
+        axios.get('https://fitnessapp-ck.herokuapp.com/exercises/weight/' + username)
             .then(response => {
                 setWeightDate(response.data)
             })

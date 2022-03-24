@@ -14,7 +14,7 @@ function CreateExercises() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/exercises/')
+        axios.get('https://fitnessapp-ck.herokuapp.com/exercises/')
             .then(response => {
                 if(response.data.length > 0) {
                     setUsers(response.data.map(user => user.username));
@@ -51,7 +51,7 @@ function CreateExercises() {
 
         console.log(exercise);
 
-        axios.post('http://localhost:5000/exercises/addCardio/' + username, exercise)
+        axios.post('https://fitnessapp-ck.herokuapp.com/exercises/addCardio/' + username, exercise)
             .then(res => console.log(res.data));
 
         window.location = '/fitnessList'

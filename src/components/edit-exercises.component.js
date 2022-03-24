@@ -56,7 +56,7 @@ function EditExercises() {
         console.log(exercise);
         console.log(workoutid)
 
-        axios.post('http://localhost:5000/exercises/updateCardio/' + username + "/" + workoutid, exercise)
+        axios.post('https://fitnessapp-ck.herokuapp.com/exercises/updateCardio/' + username + "/" + workoutid, exercise)
             .then(res => console.log("workout updated"));
 
         window.location = '/fitnessList';

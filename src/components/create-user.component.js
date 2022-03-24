@@ -29,10 +29,10 @@ function CreateUser() {
 
         console.log(user);
 
-        axios.post('http://localhost:5000/users/add', user)
+        axios.post('https://fitnessapp-ck.herokuapp.com/users/add', user)
             .then(res => console.log(res.data));
 
-        axios.post('http://localhost:5000/exercises/updateWeight', userWeight)
+        axios.post('https://fitnessapp-ck.herokuapp.com/exercises/updateWeight', userWeight)
             .then(res => console.log(res.data));
 
         setUsername('');

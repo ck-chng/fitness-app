@@ -9,7 +9,7 @@ function UpdateWeight() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/exercises/')
+        axios.get('https://fitnessapp-ck.herokuapp.com/exercises/')
             .then(response => {
                 if (response.data.length > 0) {
                     setUsers(response.data.map(user => user.username));
@@ -36,7 +36,7 @@ function UpdateWeight() {
 
         console.log(userWeight);
 
-        axios.post('http://localhost:5000/exercises/updateWeight', userWeight)
+        axios.post('https://fitnessapp-ck.herokuapp.com/exercises/updateWeight', userWeight)
             .then(res => console.log(res.data));
 
         setWeight('');

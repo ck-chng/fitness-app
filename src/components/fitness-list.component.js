@@ -10,7 +10,7 @@ function FitnessList() {
     const [weight, setWeight] = useState(0);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/exercises/')
+        axios.get('https://fitnessapp-ck.herokuapp.com/exercises/')
             .then(response => {
                     setFitness(response.data)
                     setUsers(response.data.map(user => user.username))
@@ -24,7 +24,7 @@ function FitnessList() {
     }, []);
 
     function deleteCardio(username, id) {
-        axios.post('http://localhost:5000/exercises/deleteCardio/' + username + "/" + id)
+        axios.post('https://fitnessapp-ck.herokuapp.com/exercises/deleteCardio/' + username + "/" + id)
             .then(res => console.log(res.data))
 
         window.location.reload(false)
