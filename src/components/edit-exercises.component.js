@@ -15,7 +15,7 @@ function EditExercises() {
     const { logon, workoutid } = useParams();
 
     useEffect(() => {
-        axios.get('http://localhost:5000/exercises/'+ logon + "/" + workoutid)
+        axios.get('https://fitness-app-ck.netlify.app/exercises/'+ logon + "/" + workoutid)
             .then(response => {
                 setUsername(logon);
                 if (response.data.length > 0) {
