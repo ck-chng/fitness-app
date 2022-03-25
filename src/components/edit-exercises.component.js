@@ -57,7 +57,10 @@ function EditExercises() {
         console.log(workoutid)
 
         axios.post('https://fitnessapp-ck.herokuapp.com/exercises/updateCardio/' + username + "/" + workoutid, exercise)
-            .then(res => console.log("workout updated"));
+            .then(res => console.log("workout updated"))
+            .catch((error) => {
+                console.log(error);
+            });
 
         window.location = '/fitnessList';
     }
