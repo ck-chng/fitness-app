@@ -111,13 +111,15 @@ function Chart() {
                             type: 'time',
                             time: {
                                 unit: 'day'
-                            }
+                            },
+                            title: "Weight (kg)"
                         },
                         yAxes: 
                             {
                                 ticks: {
                                     stepSize: 1
                                 },
+                                title: "Date",
                                 beginAtZero: false
                             }
                     }
