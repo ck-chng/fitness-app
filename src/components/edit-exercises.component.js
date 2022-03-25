@@ -15,7 +15,7 @@ function EditExercises() {
     const { logon, workoutid } = useParams();
 
     useEffect(() => {
-        axios.get('https://fitnessapp-ck.herokuapp.com/exercises/'+ logon + "/" + workoutid)
+        axios.get('https://fitnessapp-ck.herokuapp.com/exercises/' + logon + "/" + workoutid)
             .then(response => {
                 setUsername(logon);
                 if (response.data.length > 0) {
