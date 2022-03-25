@@ -21,6 +21,9 @@ function CreateExercises() {
                     setUsername(response.data[0].username)
                 }
             })
+            .catch((error) => {
+                console.log(error);
+            })
     }, [])
 
 
@@ -52,7 +55,10 @@ function CreateExercises() {
         console.log(exercise);
 
         axios.post('https://fitnessapp-ck.herokuapp.com/exercises/addCardio/' + username, exercise)
-            .then(res => console.log(res.data));
+            .then(res => console.log(res.data))
+            .catch((error) => {
+                console.log(error);
+            });
 
         window.location = '/fitnessList'
     }

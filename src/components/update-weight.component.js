@@ -15,6 +15,9 @@ function UpdateWeight() {
                     setUsers(response.data.map(user => user.username));
                 }
             })
+            .catch((error) => {
+                console.log(error);
+            })
     }, [])
 
     function onChangeWeight(e) {
@@ -37,7 +40,10 @@ function UpdateWeight() {
         console.log(userWeight);
 
         axios.post('https://fitnessapp-ck.herokuapp.com/exercises/updateWeight', userWeight)
-            .then(res => console.log(res.data));
+            .then(res => console.log(res.data))
+            .catch((error) => {
+                console.log(error);
+            })
 
         setWeight('');
     }
